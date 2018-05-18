@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Order Now</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+	<link href='http://www.w3schools.com/lib/w3.css' rel='stylesheet' type='text/css'>
+  </head>
+  
+	<body>
+		<header>
+			<nav id="header-nav" class="navbar navbar-default">
+				<div class="container">
+					<div class="navbar-header">
+						<a href="orderNow.html" class="pull-left visible-md visible-lg">
+							<div id="logo-img"></div>
+						</a>
+					
+						<div class="navbar-brand">
+							<a href="homepage.html"><h1>HCI BAR & RESTAURANT</h1> 
+								<div>
+									<span class="glyphicon glyphicon-star-empty  btn-lg visible-md visible-lg"><P>Junk Certified</p>
+									</span>
+								</div>	
+							</a>
+						</div>
+					
+						<button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					
+					
+					<div id="collapsable-nav" class="collapse navbar-collapse">
+						<ul id="nav-list" class="nav navbar-nav navbar-right">
+							<li>
+								<a href="login.html">
+									<span class="glyphicon glyphicon-user"></span><br class="hidden-xs"> Login</a>
+							</li>
+							<li>
+								<a href="orderNow.html">
+									<span class="glyphicon glyphicon-triangle-bottom"></span><br class="hidden-xs"> Order Now</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs"> Deals</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> Customer Service</a>
+							</li>
+							<li id="phone" class="hidden-xs">
+								<a href="tel:419-666-0007">
+									<span>419-666-0007</span></a><div>* We Deliver</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		
+		<nav class="w3-sidenav w3-light-grey w3-card-2" id="size">
+			<div class="w3-container">
+				<h5><b>Category</b></h5>
+			</div>
+			<a href="javascript:void(0)" class="tablink" onclick="openFood(event, 'Rice')">Rice</a>
+			<a href="javascript:void(0)" class="tablink" onclick="openFood(event, 'Noodles')">Noodles</a>
+			<a href="javascript:void(0)" class="tablink" onclick="openFood(event, 'Chicken')">Chicken</a>
+			<a href="javascript:void(0)" class="tablink" onclick="openFood(event, 'Beef')">Beef</a>	
+		</nav>
+	
+		<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" class="right">
+			<input type="hidden" name="business" value="kin@kinskards.com">
+			<input type="hidden" name="cmd" value="_cart">
+			<input type="hidden" name="display" value="1">
+			<input type="hidden" name="orderNow" value="orderNow.html">
+			<input type="image" name="submit" onclick=getContinueShoppingURL(this.form) src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_viewcart_113x26.png" alt="Add to Cart">
+			<img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+		</form>
+		
+		<!-- meals -->
+		<div style="margin-left:100px">
+			<div id="Rice" class="w3-container food">
+				<center>
+					<div class="w3-panel w3-red" style="width:180px">
+						<h1 class="w3-opacity w3-center"><b>Rice</b></h1>
+					</div>
+				</center>
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-2" id="shrink">
+							<img src="Images/chicRice.png" width="120px" height="120px">
+								<h3 id="font_resize">
+								Name: Chicken Fried Rice <br>
+								Price:	$9.95 <br>
+								<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+									<input type="hidden" name="business" value="kin@kinskards.com">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="add" value="1">
+									<input type="hidden" name="item_name" value="Chicken Fried Rice">
+									<input type="hidden" name="amount" value="9.95">
+									<input type="hidden" name="currency_code" value="USD">
+									<input type="image" name="submit" onclick=getContinueShoppingURL(this.form) src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png" alt="Add to Cart">
+									<img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+								</form>
+							</h3>
+						</div>
+						<div class="col-sm-2" id="shrink">
+							<img src="Images/beefRice.png" width="120px" height="120px">
+								<h3 id="font_resize">
+								Name: Beef Fried Rice <br>
+								Price:	$9.95 <br>
+								<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+									<input type="hidden" name="business" value="kin@kinskards.com">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="add" value="1">
+									<input type="hidden" name="item_name" value="Beef Fried Rice">
+									<input type="hidden" name="amount" value="9.95">
+									<input type="hidden" name="currency_code" value="USD">
+									<input type="image" name="submit" onclick=getContinueShoppingURL(this.form) src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png" alt="Add to Cart">
+									<img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+								</form>
+							</h3>
+						</div>
+						<div class="col-sm-2" id="shrink">
+							<img src="Images/porkRice.png" width="120px" height="120px">
+								<h3 id="font_resize">
+								Name: Pork Fried Rice <br>
+								Price:	$9.95 <br>
+								<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+									<input type="hidden" name="business" value="kin@kinskards.com">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="add" value="1">
+									<input type="hidden" name="item_name" value="Pork Fried Rice">
+									<input type="hidden" name="amount" value="9.95">
+									<input type="hidden" name="currency_code" value="USD">
+									<input type="image" name="submit" onclick=getContinueShoppingURL(this.form) src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png" alt="Add to Cart">
+									<img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+								</form>
+							</h3>
+						</div>
+						<div class=" col-sm-2" id="shrink">
+							<img src="Images/shrimpRice.png" width="120px" height="120px">
+								<h3 id="font_resize">
+								Name: Shrimp fried rice <br>
+								Price:	$10.95 <br>
+								<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+									<input type="hidden" name="business" value="kin@kinskards.com">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="add" value="1">
+									<input type="hidden" name="item_name" value="Shrimp Fried Rice">
+									<input type="hidden" name="amount" value="10.95">
+									<input type="hidden" name="currency_code" value="USD">
+									<input type="image" name="submit" onclick=getContinueShoppingURL(this.form) src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png" alt="Add to Cart">
+									<img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+								</form>
+							</h3>
+						</div>
+						<div class=" col-sm-2" id="shrink">
+							<img src="Images/hawaiianRice.png" width="120px" height="120px">
+								<h3 id="font_resize">
+								Name: Hawaiian Fried Rice <br>
+								Price:	$11.95 <br>
+								<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+									<input type="hidden" name="business" value="kin@kinskards.com">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="add" value="1">
+									<input type="hidden" name="item_name" value="Hawaiian Fried Rice">
+									<input type="hidden" name="amount" value="11.95">
+									<input type="hidden" name="currency_code" value="USD">
+									<input type="image" name="submit" onclick=getContinueShoppingURL(this.form) src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png" alt="Add to Cart">
+									<img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+								</form>
+							</h3>
+						</div>
+						<div class=" col-sm-2" id="shrink">
+							<img src="Images/specialRice.png" width="120px" height="120px">
+								<h3 id="font_resize">
+								Name: Special Fried Rice <br>
+								Price:	$12.95 <br>
+								<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+									<input type="hidden" name="business" value="kin@kinskards.com">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="add" value="1">
+									<input type="hidden" name="item_name" value="Special Fried Rice">
+									<input type="hidden" name="amount" value="12.95">
+									<input type="hidden" name="currency_code" value="USD">
+									<input type="image" name="submit" onclick=getContinueShoppingURL(this.form) src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png" alt="Add to Cart">
+									<img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+								</form>
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="Noodles" class="w3-container food">
+				<center>
+					<div class="w3-panel w3-red" style="width:180px">
+						<h1 class="w3-opacity w3-center"><b>Noodles</b></h1>
+					</div>
+				</center>
+				<div class="container">
+					<div class="row">
+						<div class=" col-sm-2" id="shrink">
+							<img src="Images/chowMein.png" width="120px" height="120px">
+								<h3 id="font_resize">
+								Name: Chow Mein <br>
+								Price:	$10.95 <br>
+								<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+									<input type="hidden" name="business" value="kin@kinskards.com">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="add" value="1">
+									<input type="hidden" name="item_name" value="Chow Mein">
+									<input type="hidden" name="amount" value="10.95">
+									<input type="hidden" name="currency_code" value="USD">
+									<input type="image" name="submit" onclick=getContinueShoppingURL(this.form) src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png" alt="Add to Cart">
+									<img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+								</form>
+							</h3>
+						</div>
+						<div class=" col-sm-2" id="shrink">
+							<img src="Images/indomie.png" width="120px" height="120px">
+								<h3 id="font_resize">
+								Name: Indomie Noodles <br>
+								Price:	$11.95 <br>
+								<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+									<input type="hidden" name="business" value="kin@kinskards.com">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="add" value="1">
+									<input type="hidden" name="item_name" value="Indomie Noodles">
+									<input type="hidden" name="amount" value="11.95">
+									<input type="hidden" name="currency_code" value="USD">
+									<input type="image" name="submit" onclick=getContinueShoppingURL(this.form) src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png" alt="Add to Cart">
+									<img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+								</form>
+							</h3>
+						</div>
+						<div class=" col-sm-2" id="shrink">
+							<img src="Images/hoFan.png" width="120px" height="120px">
+								<h3 id="font_resize">
+								Name: Ho Fan Noodles <br>
+								Price:	$12.95 <br>
+								<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+									<input type="hidden" name="business" value="kin@kinskards.com">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="add" value="1">
+									<input type="hidden" name="item_name" value="Ho Fan Noodles">
+									<input type="hidden" name="amount" value="12.95">
+									<input type="hidden" name="currency_code" value="USD">
+									<input type="image" name="submit" onclick=getContinueShoppingURL(this.form) src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png" alt="Add to Cart">
+									<img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+								</form>
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="Chicken" class="w3-container food">
+				<center>
+					<div class="w3-panel w3-red" style="width:180px">
+						<h1 class="w3-opacity w3-center"><b>Chicken</b></h1>
+					</div>
+				</center>
+				<div class="container">
+					<div class="row">
+						<div class=" col-sm-2" id="shrink">
+							<img src="Images/garlicChic.png" width="120px" height="120px">
+								<h3 id="font_resize">
+								Name: Garlic Chicken <br>
+								Price:	$12.95 <br>
+								<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+									<input type="hidden" name="business" value="kin@kinskards.com">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="add" value="1">
+									<input type="hidden" name="item_name" value="Garlic Chicken">
+									<input type="hidden" name="amount" value="12.95">
+									<input type="hidden" name="currency_code" value="USD">
+									<input type="image" name="submit" onclick=getContinueShoppingURL(this.form) src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png" alt="Add to Cart">
+									<img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+								</form>
+							</h3>
+						</div>
+						<div class=" col-sm-2" id="shrink">
+							<img src="Images/lemonChic.png" width="120px" height="120px">
+								<h3 id="font_resize">
+								Name: Lemon Chicken <br>
+								Price:	$13.95 <br>
+								<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+									<input type="hidden" name="business" value="kin@kinskards.com">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="add" value="1">
+									<input type="hidden" name="item_name" value="Lemon Chicken">
+									<input type="hidden" name="amount" value="13.95">
+									<input type="hidden" name="currency_code" value="USD">
+									<input type="image" name="submit" onclick=getContinueShoppingURL(this.form) src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png" alt="Add to Cart">
+									<img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+								</form>
+							</h3>
+						</div>
+						<div class=" col-sm-2" id="shrink">
+							<img src="Images/barbChic.png" width="120px" height="120px">
+								<h3 id="font_resize">
+								Name: Barbecue Chicken <br>
+								Price:	$13.95 <br>
+								<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+									<input type="hidden" name="business" value="kin@kinskards.com">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="add" value="1">
+									<input type="hidden" name="item_name" value="Barbecue Chicken">
+									<input type="hidden" name="amount" value="13.95">
+									<input type="hidden" name="currency_code" value="USD">
+									<input type="image" name="submit" onclick=getContinueShoppingURL(this.form) src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png" alt="Add to Cart">
+									<img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+								</form>
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="Beef" class="w3-container food">
+				<center>
+					<div class="w3-panel w3-red" style="width:180px">
+						<h1 class="w3-opacity w3-center"><b>Beef</b></h1>
+					</div>
+				</center>
+				<div class="container">
+					<div class="row">
+						<div class=" col-sm-2" id="shrink">
+							<img src="Images/suya.png" width="120px" height="120px">
+								<h3 id="font_resize">
+								Name: Suya Sticks <br>
+								Price:	$15.95 <br>
+								<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+									<input type="hidden" name="business" value="kin@kinskards.com">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="add" value="1">
+									<input type="hidden" name="item_name" value="Suya Sticks">
+									<input type="hidden" name="amount" value="15.95">
+									<input type="hidden" name="currency_code" value="USD">
+									<input type="image" name="submit" onclick=getContinueShoppingURL(this.form) src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png" alt="Add to Cart">
+									<img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+								</form>
+							</h3>
+						</div>
+						<div class=" col-sm-2" id="shrink">
+							<img src="Images/sirloin.png" width="120px" height="120px">
+								<h3 id="font_resize">
+								Name: Sirloin Steak <br>
+								Price:	$19.95 <br>
+								<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+									<input type="hidden" name="business" value="kin@kinskards.com">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="add" value="1">
+									<input type="hidden" name="item_name" value="Sirloin Steak">
+									<input type="hidden" name="amount" value="19.95">
+									<input type="hidden" name="currency_code" value="USD">
+									<input type="image" name="submit" src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png" alt="Add to Cart">
+									<img alt="" width="1" height="1" onclick=getContinueShoppingURL(this.form) src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+								</form>
+							</h3>
+						</div>
+						<div class=" col-sm-2" id="shrink">
+							<img src="Images/rib.png" width="120px" height="120px">
+								<h3 id="font_resize">
+								Name: Rib Eye Steak <br>
+								Price:	$22.95 <br>
+								<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+									<input type="hidden" name="business" value="kin@kinskards.com">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="add" value="1">
+									<input type="hidden" name="item_name" value="Rib Eye Steak">
+									<input type="hidden" name="amount" value="22.95">
+									<input type="hidden" name="currency_code" value="USD">
+									<input type="image" name="submit" onclick=getContinueShoppingURL(this.form) src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png" alt="Add to Cart">
+									<img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+								</form>
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<footer class="panel-footer">
+			<div class="container">
+				<div class="row">
+					<section class="col-sm-4">
+						<span><b>Hours:</b></span><br>
+						Mon-Fri: 11:30am - 10:00pm<br>
+						Saturday: 12:00pm - 9:00pm<br>
+						Sunday: 12:00 pm - 8:00pm
+						<hr class="visible-xs">
+					</section>
+					<section class="col-sm-4">
+						<span><b>Address:</b></span><br>
+						E2-560 University of Manitoba<br>
+						Winnipeg, Manitoba
+						R3T 2N2 Canada
+						<p>* Delivery area within 3-4 miles, with minimum order of $20 plus $3 charge for all deliveries.</p>
+						<hr class="visible-xs">
+					</section>
+					<section class="col-sm-4">
+						<div class="col-md-4 col-sm-12 col-xs-12">
+							<a href="https://www.google.ca/maps/place/Winnipeg,+MB+R3T+2N2/@49.8092247,-97.138244,15.96z/data=!4m5!3m4!1s0x52ea75e4a7860039:0xd38ca48d704395c1!8m2!3d49.8112193!4d-97.134843" target="_blank">
+								<div>
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5300.429375911672!2d-97.13824401740874!3d49.80922468687082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea75e4a7860039%3A0xd38ca48d704395c1!2sWinnipeg%2C+MB+R3T+2N2!5e0!3m2!1sen!2sca!4v1479367508027" width="270" height="170" frameborder="0" style="border:2px solid purple" allowfullscreen></iframe>
+									<span><center>map</center></span>
+								</div>
+							</a>
+						</div> 
+					</section>
+				</div>
+				<div class="text-center">&copy; Copyright HCI Bar & Restaurant 2016</div>
+			</div>
+		</footer>
+
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>
