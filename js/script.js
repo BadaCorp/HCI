@@ -155,7 +155,7 @@ function formValidation()
 		else
 		{
 			alert("Successfully Registered");
-			window.location= "user1.html";
+			window.location= "orderNow.html";
 			return true;
 		}
 	} 
@@ -197,7 +197,7 @@ function userValidate()
 	{
 		
 		alert("Login successfully");
-		window.location = "user1.html";
+		window.location = "orderNow.html";
 		return true;;
 	}
 }
